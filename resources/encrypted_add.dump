@@ -1,0 +1,10 @@
+00000000004018b5 <add>:
+  4018b5:       b2 4e                   mov    $0x4e,%dl
+  4018b7:       5f                      pop    %rdi
+  4018b8:       bb 14 09 c8 a4          mov    $0xa4c80914,%ebx
+  4018bd:       c8 3c bd c8             enter  $0xbd3c,$0xc8
+  4018c1:       34 b9                   xor    $0xb9,%al
+  4018c3:       ca 14 bd                lret   $0xbd14
+  4018c6:       ca 04 b9                lret   $0xb904
+  4018c9:       40 91                   rex xchg %eax,%ecx
+  4018cb:       1c 82                   sbb    $0x82,%al
