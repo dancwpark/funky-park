@@ -32,6 +32,8 @@ def main():
         # currently hardcoded
         function_name = "add"
         for symbol in symbol_table.iter_symbols():
+            if symbol.name == "_init":
+                print(f"Found init at 0x{symbol.entry['st_value']:x}")
             if symbol.name == function_name:
                 function_addr = symbol.entry["st_value"]
                 function_size = symbol.entry["st_size"]
